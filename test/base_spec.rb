@@ -12,9 +12,8 @@ class BaseSpec < MiniTest::Spec
     Capybara.default_driver = :selenium_chrome
   end
 
-    after(:each) do
-      Capybara.reset_sessions!
-      Capybara.use_default_driver
-    end
+  after(:each) do
+    Capybara.reset_sessions!
+    Capybara.use_default_driver
   end
 end
